@@ -1,26 +1,20 @@
  <div class="container">
-    <div id="success" class="alert alert-success {{#if noMessages}}hidden{{/if}}">
-        {{ successMsg }}
-    </div>
     <h1 class="text-center mt-2 boldText">Downloads</h1>
     <h4 class="text-center">Art and Tutorial Files!</h4>
 
-    {{# each products }}
-        <div class="card-deck mt-3" >
-            {{# each this }}
-            <div class="card" >
-                <a href="/downloads/{{ this.id }}"><img class="card-img-top" src="{{ this.imgPath }}" alt="Card image cap"></a>
-                <div class="card-body">
-                    <h5 class="card-title boldText">{{ this.title }}</h5>
-                </div>
-                <div class="card-footer">
-                    <a href="/downloads/{{ this.id }}" class="btn btn-primary btn-block btn-danger card-bottom" style="margin-top: 5px;">View Product</a>
-                </div>
-            </div>
-            {{/each}}
-        </div> 
-    {{/each}}
 
+    <div id="store">		
+
+		<div id="my-store-11521193"></div>
+		<div>
+			<script type="text/javascript" src="https://app.ecwid.com/script.js?11521193&data_platform=code&data_date=2017-05-10" charset="utf-8"></script><script type="text/javascript"> xProductBrowser("categoriesPerRow=4","views=grid(20,4) list(60) table(60)","categoryView=grid","searchView=list","id=my-store-11521193");</script>
+		</div>
+
+	</div>	
+
+	<div id="backToStore">
+		<a href="/downloads">Back To Downloads</a>
+	</div>
    
 
 </div> {{!-- end container div --}}

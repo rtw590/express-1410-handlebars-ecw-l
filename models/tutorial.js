@@ -47,6 +47,9 @@ var TutorialSchema = new Schema({
     },
     filesNeeded5Title: {
         type: String
+    },
+    ecwid: {
+        type: String
     }
 });
 

@@ -13,36 +13,8 @@
         </div>
 
         <div class="col-md-5">
-            <div>
-                <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">{{ tutorial.title }} Files</h5>
-                    <p class="card-text">
-                        All tutorial files are available for download. You can download them for free or you can support my content
-                        by choosing to pay.
-                    </p>
-                    <div style= "width: 100%;">
-                        <form id="tableForm" action="/tutorials/add-to-cart/{{ tutorial._id }}" method="post">
-                        <select style= "width: 100%;" name="PWYW" data-style="btn-info" class="PWYW">
-                            <option name="0" value="0">Free :)</option>
-                            <option name="1" value="1">$1 - Thanks!</option>
-                            <option name="2" value="2">$2 - You're Awesome!</option>
-                            <option name="5" value="5">$5 - I've Got Five On It</option>
-                            <option name="10" value="10">$10 - Wow!</option>
-                        </select>
-                        <br>
-                        {{!-- <a href="/tutorials/add-to-cart/{{ tutorial._id }}"> --}}
-                            <input type="submit" class="btn btn-danger mt-1" style= "width: 100%;" value="Add To Cart" />
-                        {{!-- </a> --}}
-                        <br>
-                        <a href="/account/shopping-cart">
-                            <button type="button" class="btn btn-light mt-1" style= "width: 100%;">View Cart</button>
-                        </a>
-                        </form>
-                    </div>
-                </div>
-                </div>
-            </div>
+            {{{ tutorial.ecwid }}}
+            {{!-- <div class="ecwid ecwid-SingleProduct-v2 ecwid-SingleProduct-v2-bordered ecwid-Product ecwid-Product-87180937" itemscope itemtype="http://schema.org/Product" data-single-product-id="87180937"><div itemprop="image"></div><div class="ecwid-title" itemprop="name" content="Clock Tutorial Files"></div><div itemtype="http://schema.org/Offer" itemscope itemprop="offers"><div class="ecwid-productBrowser-price ecwid-price" itemprop="price" content="0" data-spw-price-location="button"><div itemprop="priceCurrency" content="USD"></div></div></div><div customprop="options"></div><div customprop="addtobag"></div></div><script type="text/javascript" src="https://app.ecwid.com/script.js?11521193&data_platform=singleproduct_v2" charset="utf-8"></script><script type="text/javascript">xProduct()</script> --}}
         </div>
 
     </div>
@@ -58,6 +30,17 @@
                 <li><a href="{{ tutorial.filesNeeded4 }}" target="_blank">{{ tutorial.filesNeeded4Title }}</a></li>
 		    </ul>
         </div>
+
+    <div id="store">		
+
+		<div id="my-store-11521193"></div>
+		<div>
+			<script type="text/javascript" src="https://app.ecwid.com/script.js?11521193&data_platform=code&data_date=2017-05-10" charset="utf-8"></script><script type="text/javascript"> xProductBrowser("categoriesPerRow=4","views=grid(20,4) list(60) table(60)","categoryView=grid","searchView=list","id=my-store-11521193");</script>
+		</div>
+
+	</div>	
+
+
 </div>
 
 

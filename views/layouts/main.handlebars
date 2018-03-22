@@ -37,30 +37,6 @@
                             <a class="nav-link" href="/tutorials">Tutorials</a>
                         </li>
 
-                        <li class="nav-item red">
-                            <a class="nav-link" href="/account/shopping-cart">
-                                <i class="fas fa-shopping-cart mr-1"></i>Cart
-                                <span class="badge badge-light">{{ session.cart.totalQty }}</span>
-                            </a>
-                        </li>
-                        <li class="nav-item dropdown red">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-user mr-1"></i>Account
-                            </a>
-                            {{# if login }}
-                                <div class="dropdown-menu ml-3" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="/account/profile">View Account</a>
-                                    <a class="dropdown-item" href="/account/logout">Logout</a>
-                                </div>
-                            {{ else }}
-                                <div class="dropdown-menu ml-3" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="/account/signup">Sign Up</a>
-                                    <a class="dropdown-item" href="/account/signin">Login</a>
-                                </div>
-                            {{/if}}
-                            
-                        </li>
-
                     </ul>
                 </div>
             </nav>
