@@ -26,8 +26,12 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 require('./config/passport');
 
 app.set('views', path.join(__dirname, 'views'));
-app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.engine('handlebars', exphbs({
+    defaultLayout: 'main',
+    partialsDir: __dirname + '/views/partials/'
+}));
 app.set('view engine', 'handlebars');
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
