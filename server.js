@@ -76,7 +76,7 @@ app.get('/downloads', function(req, res){
     res.render('downloads');
 });
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 80;
   
 app.listen(port, function () {
     console.log('Server listening at port', port);
