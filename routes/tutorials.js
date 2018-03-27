@@ -45,21 +45,32 @@ router.get('/add-to-cart/:id', function(req, res, next) {
     });
 });
 
-// Second Attempt to work
-router.post('/add-to-cart/:id', function(req, res, next) {
-    var tutorialId = req.params.id;
-    var cart = new Cart(req.session.cart ? req.session.cart : {});
-    var PWYW = parseInt(req.body.PWYW);
+// Add Submit POST Route
+router.post('/add', function(req, res){
+    let tutorial = new Tutorial();
+    tutorial.title = req.body.title;
+    tutorial.imgPath = req.body.imgPath;
+    tutorial.youtubeID = req.body.youtubeID;
+    tutorial.imgPath = req.body.imgPath;
+    tutorial.shortDesc = req.body.shortDesc;
+    tutorial.longDesc = req.body.longDesc;
+    tutorial.filesNeeded1Title = req.body.filesNeeded1Title;
+    tutorial.filesNeeded1 = req.body.filesNeeded1;
+    tutorial.filesNeeded2Title = req.body.filesNeeded2Title;
+    tutorial.filesNeeded2 = req.body.filesNeeded2;
+    tutorial.filesNeeded3Title = req.body.filesNeeded3Title;
+    tutorial.filesNeeded3 = req.body.filesNeeded3;
+    tutorial.filesNeeded4Title = req.body.filesNeeded4Title;
+    tutorial.filesNeeded4 = req.body.filesNeeded4;
+    tutorial.ecwid = req.body.ecwid;
 
-    Tutorial.findById(tutorialId, function(err, tutorial) {
-        if (err) {
-            console.log(err);
-            return res.send('There was an error');
-        }
-        cart.add(tutorial, tutorial.id, PWYW);
-        req.session.cart = cart;
-        console.log(req.session.cart)
-        res.redirect('/tutorials')
+    tutorial.save(function(err){
+    if(err){
+        console.log(err);
+        return;
+    } else {
+        res.redirect('/');
+    }
     });
 });
 

@@ -17,7 +17,9 @@ var app = express();
 
 //Set up mongoose connection
 var mongoose = require('mongoose');
-var mongoDB = 'mongodb://user1:password1@ds111618.mlab.com:11618/14-10-store';
+// For using mongodb on MLab
+// var mongoDB = 'mongodb://user1:password1@ds111618.mlab.com:11618/14-10-store';
+var mongoDB = 'mongodb://localhost/1410';
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
