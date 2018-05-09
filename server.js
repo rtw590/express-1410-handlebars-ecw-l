@@ -78,8 +78,6 @@ app.get('/downloads', function(req, res){
     res.render('downloads');
 });
 
-var port = process.env.PORT || 80;
-  
-app.listen(port, function () {
-    console.log('Server listening at port', port);
-}); 
+
+app.listen(8080, '10.136.51.84');
+console.log('Server running at http://10.136.51.84:8080/');
